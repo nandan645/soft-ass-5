@@ -5,6 +5,13 @@ def add_task(task):
     tasks.append(task)
     print(f'Task "{task}" added.')
 
+def delete_task(index):
+    if 0 <= index < len(tasks):
+        removed = tasks.pop(index)
+        print(f'Task "{removed}" removed.')
+    else:
+        print("Invalid task number.")
+        
 def list_tasks():
     if not tasks:
         print("No tasks available.")
